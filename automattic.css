@@ -16,6 +16,148 @@ address, article, aside, details, dialog, div, footer, header, main, menu, nav, 
 /* Utility to remove padding from any element */
 .no-padding { padding: 0 !important; }
 
+:root {
+  /* Fluid font sizes using clamp for responsive scaling */
+  --fluid-min-size: 1rem;
+  --fluid-max-size: 1.25rem;
+  --fluid-font-size: clamp(var(--fluid-min-size), calc(1rem + 1vw), var(--fluid-max-size));
+
+  /* Fluid heading sizes */
+  --fluid-h1: clamp(2.25rem, 4vw + 1rem, 3.5rem);
+  --fluid-h2: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+  --fluid-h3: clamp(1.5rem, 2vw + 1rem, 2rem);
+  --fluid-h4: clamp(1.25rem, 1.5vw + 1rem, 1.5rem);
+  --fluid-h5: clamp(1.125rem, 1vw + 1rem, 1.25rem);
+  --fluid-h6: clamp(1rem, 0.5vw + 1rem, 1.125rem);
+
+  /* Smart line heights */
+  --line-height-body: 1.6;
+  --line-height-heading: 1.15;
+  --line-height-tight: 1.1;
+  --line-height-loose: 1.8;
+
+  /* Colors */
+  --bg-light: #ffffff; /* Default light background */
+  --bg-dark: #000000; /* Default dark background */
+  --bg-ultra-light: #f5f5f5; /* Default ultra-light background */
+  --bg-ultra-dark: #1a1a1a; /* Default ultra-dark background */
+  --color-primary: #0071e3; /* Default primary color */
+  --color-primary-dark: #005bb5; /* Darker primary color */
+  --color-secondary: #6e6e73; /* Default secondary color */
+  --color-tertiary: #333333; /* Default tertiary color */
+  --color-accent: #10B981; /* Default accent color */
+  --color-accent-dark: #059669; /* Darker accent color */
+  --color-neutral: #f0f0f0; /* Default neutral color */
+  --color-neutral-dark: #d9d9d9; /* Darker neutral color */
+  --text-light: #ffffff; /* Default light text */
+  --text-dark: #000000; /* Default dark text */
+  --text-light-muted: #d1d1d1; /* Default muted light text */
+  --text-dark-muted: #6e6e73; /* Default muted dark text */
+
+  /* Spacing */
+  --spacing-xxs: 0.25rem; /* Extra extra small spacing */
+  --spacing-xs: 0.5rem; /* Extra small spacing */
+  --spacing-sm: 0.75rem; /* Small spacing */
+  --spacing-md: 1rem; /* Medium spacing */
+  --spacing-lg: 1.5rem; /* Large spacing */
+  --spacing-xl: 2rem; /* Extra large spacing */
+  --spacing-xxl: 3rem; /* Extra extra large spacing */
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem; /* Extra small font size */
+  --font-size-sm: 0.875rem; /* Small font size */
+  --font-size-base: 1rem; /* Base font size */
+  --font-size-lg: 1.25rem; /* Large font size */
+  --font-size-xl: 1.5rem; /* Extra large font size */
+  --font-size-xxl: 2rem; /* Extra extra large font size */
+
+  /* Shadows */
+  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1); /* Small shadow */
+  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1); /* Medium shadow */
+  --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1); /* Large shadow */
+  --box-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1); /* Extra large shadow */
+
+  /* Gaps */
+  --container-gap: 1rem; /* Default container gap */
+  --content-gap: 1.5rem; /* Default content gap */
+
+  /* Focus */
+  --focus-width: 2px; /* Focus outline width */
+  --focus-color: var(--color-primary); /* Focus outline color */
+  --focus-offset: 2px; /* Focus outline offset */
+
+  /* Border Radius */
+  --btn-radius: 6px;
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+}
+
+html {
+  font-size: var(--fluid-font-size);
+  line-height: var(--line-height-body);
+}
+
+body {
+  font-size: 1rem;
+  line-height: var(--line-height-body);
+}
+
+h1 {
+  font-size: var(--fluid-h1);
+  line-height: var(--line-height-heading);
+}
+h2 {
+  font-size: var(--fluid-h2);
+  line-height: var(--line-height-heading);
+}
+h3 {
+  font-size: var(--fluid-h3);
+  line-height: var(--line-height-heading);
+}
+h4 {
+  font-size: var(--fluid-h4);
+  line-height: var(--line-height-heading);
+}
+h5 {
+  font-size: var(--fluid-h5);
+  line-height: var(--line-height-heading);
+}
+h6 {
+  font-size: var(--fluid-h6);
+  line-height: var(--line-height-heading);
+}
+
+p, li, blockquote, pre, code, td, th {
+  line-height: var(--line-height-body);
+}
+
+/* === Fluid Typography Utility Classes === */
+.text--fluid {
+  font-size: var(--fluid-font-size) !important;
+  line-height: var(--line-height-body) !important;
+}
+.text--fluid-heading {
+  font-size: var(--fluid-h2) !important;
+  line-height: var(--line-height-heading) !important;
+}
+.text--fluid-subheading {
+  font-size: var(--fluid-h4) !important;
+  line-height: var(--line-height-heading) !important;
+}
+.text--fluid-body {
+  font-size: var(--fluid-font-size) !important;
+  line-height: var(--line-height-body) !important;
+}
+.text--smart-line {
+  line-height: var(--line-height-body) !important;
+}
+
 /* Padding and Margin Utilities */
 
 .p-xxs {
@@ -1249,68 +1391,6 @@ address, article, aside, details, dialog, div, footer, header, main, menu, nav, 
 
 .btn--neutral:hover {
   background-color: var(--color-neutral-dark);
-}
-
-:root {
-  /* Colors */
-  --bg-light: #ffffff; /* Default light background */
-  --bg-dark: #000000; /* Default dark background */
-  --bg-ultra-light: #f5f5f5; /* Default ultra-light background */
-  --bg-ultra-dark: #1a1a1a; /* Default ultra-dark background */
-  --color-primary: #0071e3; /* Default primary color */
-  --color-primary-dark: #005bb5; /* Darker primary color */
-  --color-secondary: #6e6e73; /* Default secondary color */
-  --color-tertiary: #333333; /* Default tertiary color */
-  --color-accent: #10B981; /* Default accent color */
-  --color-accent-dark: #059669; /* Darker accent color */
-  --color-neutral: #f0f0f0; /* Default neutral color */
-  --color-neutral-dark: #d9d9d9; /* Darker neutral color */
-  --text-light: #ffffff; /* Default light text */
-  --text-dark: #000000; /* Default dark text */
-  --text-light-muted: #d1d1d1; /* Default muted light text */
-  --text-dark-muted: #6e6e73; /* Default muted dark text */
-
-  /* Spacing */
-  --spacing-xxs: 0.25rem; /* Extra extra small spacing */
-  --spacing-xs: 0.5rem; /* Extra small spacing */
-  --spacing-sm: 0.75rem; /* Small spacing */
-  --spacing-md: 1rem; /* Medium spacing */
-  --spacing-lg: 1.5rem; /* Large spacing */
-  --spacing-xl: 2rem; /* Extra large spacing */
-  --spacing-xxl: 3rem; /* Extra extra large spacing */
-
-  /* Font Sizes */
-  --font-size-xs: 0.75rem; /* Extra small font size */
-  --font-size-sm: 0.875rem; /* Small font size */
-  --font-size-base: 1rem; /* Base font size */
-  --font-size-lg: 1.25rem; /* Large font size */
-  --font-size-xl: 1.5rem; /* Extra large font size */
-  --font-size-xxl: 2rem; /* Extra extra large font size */
-
-  /* Shadows */
-  --box-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1); /* Small shadow */
-  --box-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1); /* Medium shadow */
-  --box-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1); /* Large shadow */
-  --box-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1); /* Extra large shadow */
-
-  /* Gaps */
-  --container-gap: 1rem; /* Default container gap */
-  --content-gap: 1.5rem; /* Default content gap */
-
-  /* Focus */
-  --focus-width: 2px; /* Focus outline width */
-  --focus-color: var(--color-primary); /* Focus outline color */
-  --focus-offset: 2px; /* Focus outline offset */
-
-  /* Border Radius */
-  --btn-radius: 6px;
-  --radius-none: 0;
-  --radius-xs: 2px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-full: 9999px;
 }
 
 .h--25 {
