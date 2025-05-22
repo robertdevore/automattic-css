@@ -1,4 +1,22 @@
-/* Fully Expanded Automattic.css Utilities */
+/* automattic.css */
+
+/* === Smart Spacing System === */
+
+/* Remove default margins from common elements to enforce layout consistency */
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li, dl, dt, dd, blockquote, pre,
+figure, figcaption, hr, table, fieldset, legend, form,
+address, article, aside, details, dialog, div, footer, header, main, menu, nav, section, summary {
+  margin: 0;
+}
+
+/* Utility to remove margin from any element */
+.no-margin { margin: 0 !important; }
+
+/* Utility to remove padding from any element */
+.no-padding { padding: 0 !important; }
+
+/* Padding and Margin Utilities */
 
 .p-xxs {
   padding: var(--spacing-xxs);
