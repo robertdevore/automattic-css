@@ -1517,9 +1517,49 @@
 /* === Extra Quality-of-Life Sets === */
 
 /* Row/Column-Specific Z-Index Helpers */
-.z--110 { z-index: 110; }
+.z--0 { z-index: 0; }
+.z--25 { z-index: 25; }
+.z--50 { z-index: 50; }
+.z--75 { z-index: 75; }
+.z--100 { z-index: 100; }
+.z--125 { z-index: 125; }
+.z--150 { z-index: 150; }
+.z--175 { z-index: 175; }
 .z--200 { z-index: 200; }
-/* ...repeat up to .z--900... */
+.z--225 { z-index: 225; }
+.z--250 { z-index: 250; }
+.z--275 { z-index: 275; }
+.z--300 { z-index: 300; }
+.z--325 { z-index: 325; }
+.z--350 { z-index: 350; }
+.z--375 { z-index: 375; }
+.z--400 { z-index: 400; }
+.z--425 { z-index: 425; }
+.z--450 { z-index: 450; }
+.z--475 { z-index: 475; }
+.z--500 { z-index: 500; }
+.z--525 { z-index: 525; }
+.z--550 { z-index: 550; }
+.z--575 { z-index: 575; }
+.z--600 { z-index: 600; }
+.z--625 { z-index: 625; }
+.z--650 { z-index: 650; }
+.z--675 { z-index: 675; }
+.z--700 { z-index: 700; }
+.z--725 { z-index: 725; }
+.z--750 { z-index: 750; }
+.z--775 { z-index: 775; }
+.z--800 { z-index: 800; }
+.z--825 { z-index: 825; }
+.z--850 { z-index: 850; }
+.z--875 { z-index: 875; }
+.z--900 { z-index: 900; }
+.z--925 { z-index: 925; }
+.z--950 { z-index: 950; }
+.z--975 { z-index: 975; }
+.z--1000 { z-index: 1000; }
+.z--top { z-index: 9999; }
+.z--bottom { z-index: -1; }
 
 /* Object-Fit Shortcut */
 img { object-fit: var(--object-fit, cover); object-position: var(--object-position, center); }
